@@ -1,0 +1,14 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" rx="52" fill="url(#paint0_linear)"/>
+  <rect x="40" y="40" width="176" height="176" rx="36" fill="white" fill-opacity="0.92"/>
+  <path d="M128 76L181 98L128 120L75 98L128 76Z" fill="#2563EB"/>
+  <path d="M92 114V140C92 157.673 108.118 172 128 172C147.882 172 164 157.673 164 140V114L128 130L92 114Z" fill="#0EA5E9"/>
+  <rect x="78" y="188" width="100" height="18" rx="9" fill="#DBEAFE"/>
+  <text x="81" y="201" fill="#1D4ED8" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1.4">SCHOOL LOGO</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="24" y1="18" x2="224" y2="238" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+</svg>

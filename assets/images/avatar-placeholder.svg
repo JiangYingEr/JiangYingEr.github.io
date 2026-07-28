@@ -1,0 +1,17 @@
+<svg width="720" height="900" viewBox="0 0 720 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="900" rx="72" fill="url(#paint0_linear)"/>
+  <circle cx="540" cy="170" r="100" fill="white" fill-opacity="0.16"/>
+  <circle cx="150" cy="740" r="180" fill="white" fill-opacity="0.09"/>
+  <path d="M360 198C286.889 198 227 257.889 227 331C227 403.118 286.889 462 360 462C432.118 462 491 403.118 491 331C491 257.889 432.118 198 360 198Z" fill="#FFF9F0" fill-opacity="0.9"/>
+  <path d="M525 673C525 578.786 448.214 502 354 502H366C271.786 502 195 578.786 195 673V720H525V673Z" fill="#FFF9F0" fill-opacity="0.9"/>
+  <path d="M212 720H508C472 780 420 818 360 818C300 818 248 780 212 720Z" fill="#FFF9F0" fill-opacity="0.55"/>
+  <rect x="76" y="74" width="156" height="42" rx="21" fill="white" fill-opacity="0.78"/>
+  <text x="105" y="102" fill="#2563EB" font-family="Georgia, serif" font-size="24" font-weight="700" letter-spacing="4">PORTRAIT</text>
+  <text x="96" y="842" fill="white" font-family="Georgia, serif" font-size="104" font-weight="700" letter-spacing="4">D KONG</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="65" y1="65" x2="672" y2="866" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#0284C7"/>
+    </linearGradient>
+  </defs>
+</svg>
