@@ -558,6 +558,20 @@ html[lang="zh"] .section-heading h2 {
   border: 1px solid rgba(31, 27, 24, 0.06);
 }
 
+.project-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.project-card.has-media {
+  grid-template-columns: minmax(132px, 180px) minmax(0, 1fr);
+  align-items: start;
+}
+
+.project-body {
+  min-width: 0;
+}
+
 .entry-card {
   display: grid;
   gap: 1rem;
@@ -571,6 +585,26 @@ html[lang="zh"] .section-heading h2 {
 .project-card:nth-child(2n) {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(241, 247, 255, 0.84));
+}
+
+.project-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 116px;
+  padding: 0.75rem;
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(237, 245, 255, 0.92));
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  overflow: hidden;
+}
+
+.project-media img {
+  width: 100%;
+  max-height: 120px;
+  object-fit: contain;
 }
 
 .project-period,
@@ -661,6 +695,10 @@ html[lang="zh"] .section-heading h2 {
   }
 
   .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card.has-media {
     grid-template-columns: 1fr;
   }
 }

@@ -301,6 +301,10 @@ const publications = [
 const openSourceProjects = [
   {
     title: "MalURLBench",
+    image: {
+      src: "imgs/malurlbench.png",
+      alt: "MalURLBench illustration"
+    },
     period: {
       en: "Benchmark & tooling",
       zh: "评测基准与工具链"
@@ -315,6 +319,10 @@ const openSourceProjects = [
   },
   {
     title: "Web-Fraud-Attack",
+    image: {
+      src: "imgs/wfa.png",
+      alt: "Web-Fraud-Attack illustration"
+    },
     period: {
       en: "Attack evaluation framework",
       zh: "攻击评测框架"
@@ -329,6 +337,10 @@ const openSourceProjects = [
   },
   {
     title: "LoopGen",
+    image: {
+      src: "imgs/loopgen.png",
+      alt: "LoopGen illustration"
+    },
     period: {
       en: "Vulnerability reproduction",
       zh: "漏洞复现与评估"
@@ -343,6 +355,10 @@ const openSourceProjects = [
   },
   {
     title: "LTD",
+    image: {
+      src: "imgs/ltd.png",
+      alt: "LTD illustration"
+    },
     period: {
       en: "Topology sensing",
       zh: "拓扑感知"
@@ -357,6 +373,10 @@ const openSourceProjects = [
   },
   {
     title: "SecureINT",
+    image: {
+      src: "imgs/secureint.png",
+      alt: "SecureINT illustration"
+    },
     period: {
       en: "Trustworthy telemetry prototype",
       zh: "可信遥测原型"
@@ -504,6 +524,10 @@ const educationEntries = [
 
 window.profileContent = {
   defaultLanguage: "zh",
+  analytics: {
+    // Set this to a GA4 measurement ID such as "G-XXXXXXXXXX" to enable analytics.
+    ga4MeasurementId: ""
+  },
   languages: {
     en: {
       site: {

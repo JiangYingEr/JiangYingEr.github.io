@@ -1,4 +1,5 @@
 const LANGUAGE_STORAGE_KEY = "homepage-language-v2";
+const GA4_SCRIPT_ID = "ga4-tag-script";
 
 let currentLanguage = null;
 
@@ -382,8 +383,21 @@ function renderProjects(items, language) {
 
   items.forEach((item) => {
     const article = createElement("article", "project-card");
+    const body = createElement("div", "project-body");
     const heading = createElement("h3");
     const titleText = getLocalizedValue(item.title, language);
+
+    if (item.image && item.image.src) {
+      article.classList.add("has-media");
+
+      const media = createElement("div", "project-media");
+      const image = document.createElement("img");
+      image.src = item.image.src;
+      image.alt = getLocalizedValue(item.image.alt, language) || `${titleText} illustration`;
+      image.loading = "lazy";
+      media.appendChild(image);
+      article.appendChild(media);
+    }
 
     if (item.link && item.link.href) {
       const titleLink = createElement("a", "project-title-link", titleText);
@@ -395,8 +409,8 @@ function renderProjects(items, language) {
       heading.textContent = titleText;
     }
 
-    article.appendChild(heading);
-    article.appendChild(createElement("p", "", getLocalizedValue(item.description, language)));
+    body.appendChild(heading);
+    body.appendChild(createElement("p", "", getLocalizedValue(item.description, language)));
 
     if (item.tags && item.tags.length > 0) {
       const tagRow = createElement("div", "tag-row");
@@ -405,8 +419,10 @@ function renderProjects(items, language) {
         tagRow.appendChild(createElement("span", "tag", getLocalizedValue(tag, language)));
       });
 
-      article.appendChild(tagRow);
+      body.appendChild(tagRow);
     }
+
+    article.appendChild(body);
     container.appendChild(article);
   });
 }
@@ -646,12 +662,48 @@ function setupLanguageToggle() {
   });
 }
 
+function initializeAnalytics() {
+  const measurementId = window.profileContent?.analytics?.ga4MeasurementId?.trim();
+
+  if (!measurementId) {
+    return;
+  }
+
+  if (window.__ga4MeasurementId === measurementId) {
+    return;
+  }
+
+  if (!window.dataLayer) {
+    window.dataLayer = [];
+  }
+
+  if (typeof window.gtag !== "function") {
+    window.gtag = function gtag() {
+      window.dataLayer.push(arguments);
+    };
+  }
+
+  window.gtag("js", new Date());
+  window.gtag("config", measurementId);
+
+  if (!document.getElementById(GA4_SCRIPT_ID)) {
+    const script = document.createElement("script");
+    script.id = GA4_SCRIPT_ID;
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
+    document.head.appendChild(script);
+  }
+
+  window.__ga4MeasurementId = measurementId;
+}
+
 function initializePage() {
   if (!window.profileContent) {
     return;
   }
 
   setLanguage(getInitialLanguage());
+  initializeAnalytics();
   setupRevealAnimations();
   setupNavigation();
   setupLanguageToggle();
