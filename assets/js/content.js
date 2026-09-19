@@ -1,5 +1,68 @@
 const publications = [
   {
+    title: "TTS-Guard: Black-Box Ownership Verification of Text-to-Speech Models via Adaptive Adversarial Speaker-Pair Fingerprints",
+    authors: "Yue X., Xu Z., Wang Z., Li M., Zhou Z., Xing W., Kong D.*, Han M.*",
+    venue: "Findings of the Association for Computational Linguistics: EMNLP",
+    year: "2026",
+    level: "CCF B",
+    status: {
+      en: "Accepted",
+      zh: "已录用"
+    },
+    intro: {
+      problem: {
+        en: "When text-to-speech models are exposed only through black-box services, model owners need reliable evidence of ownership despite changes in speakers and generated audio.",
+        zh: "当文本语音生成模型仅以黑盒服务形式开放时，面对不同说话人和生成语音的变化，模型提供方仍需要获得可靠的所有权证据。"
+      },
+      solution: {
+        en: "This paper proposes TTS-Guard, using adaptive adversarial speaker-pair fingerprints to verify the ownership of black-box text-to-speech models.",
+        zh: "本文提出 TTS-Guard，利用自适应对抗说话人对指纹，实现对黑盒文本语音生成模型的所有权验证。"
+      }
+    }
+  },
+  {
+    title: "Policy of Thoughts: Scaling LLM Reasoning via Test-time Policy Evolution",
+    authors: "Jiao Z., Xian H., Wang Q., Ma Y., Wang Z., Kong D.*, Han M.*",
+    venue: "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    year: "2026",
+    level: "CCF B",
+    status: {
+      en: "Accepted",
+      zh: "已录用"
+    },
+    intro: {
+      problem: {
+        en: "Large language models need more adaptive reasoning strategies at test time, as fixed reasoning procedures can limit their ability to handle tasks with different levels of complexity.",
+        zh: "大语言模型在测试阶段需要更具适应性的推理策略，固定的推理流程难以充分应对复杂度不同的任务。"
+      },
+      solution: {
+        en: "This paper introduces test-time policy evolution to adapt reasoning policies during inference and improve the scalability of large-model reasoning.",
+        zh: "本文通过测试时策略演化，在推理过程中动态调整推理策略，提升大模型推理的可扩展性。"
+      }
+    }
+  },
+  {
+    title: "TurboPlan: Taming Resource-Optimal and Timely Data Plane Offloading by Reducing Task Copies",
+    authors: "Zheng L., Yu J., Zhu L., Niu J., Tian J., Kong D.*, Liu H., Zhang J., Liu X., Zhang D., Wu C., Chen X.",
+    venue: "IEEE Real-Time Systems Symposium (RTSS)",
+    year: "2026",
+    level: "CCF A",
+    status: {
+      en: "Accepted",
+      zh: "已录用"
+    },
+    intro: {
+      problem: {
+        en: "Data-plane offloading accelerates latency-critical tasks, but excessive task copies consume scarce switch resources and constrain the timely deployment of real-time workloads.",
+        zh: "数据平面卸载能够加速时延关键任务，但过多的任务副本会消耗有限的交换设备资源，并限制实时工作负载的及时部署。"
+      },
+      solution: {
+        en: "This paper proposes TurboPlan, combining automatic task decomposition with hardware-aware constraints to reduce inter- and intra-switch task copies while balancing resource efficiency and timeliness.",
+        zh: "本文提出 TurboPlan，通过自动任务分解与面向硬件特性的约束建模，减少交换设备内部及设备之间的任务副本，兼顾资源效率与实时性。"
+      }
+    }
+  },
+  {
     title: "When Address Learning Goes Wrong: Inducing Forwarding Loops and DoS Amplification in SDN",
     authors: "Kong D., Zhang Y., Xie Z., Zheng N., Lin S., Xu Z., Li M., Wang Z., Chen X., Lin C., Zhang D., Liu X., Wu C., Han M.",
     venue: "USENIX Security",
@@ -392,6 +455,24 @@ const openSourceProjects = [
 ];
 
 const newsItems = [
+  {
+    title: {
+      en: "Two papers were accepted by EMNLP 2026.",
+      zh: "2篇论文被 EMNLP 2026 录用。"
+    }
+  },
+  {
+    title: {
+      en: "One paper was accepted by RTSS 2026.",
+      zh: "1篇论文被 RTSS 2026 录用。"
+    }
+  },
+  {
+    title: {
+      en: "One paper was accepted by ACM MM 2026.",
+      zh: "1篇论文被 ACM MM 2026 录用。"
+    }
+  },
   {
     title: {
       en: "One paper was accepted by USENIX Security 2026.",
