@@ -2,7 +2,7 @@ const publications = [
   {
     title: "TTS-Guard: Black-Box Ownership Verification of Text-to-Speech Models via Adaptive Adversarial Speaker-Pair Fingerprints",
     authors: "Yue X., Xu Z., Wang Z., Li M., Zhou Z., Xing W., Kong D.*, Han M.*",
-    venue: "Findings of the Association for Computational Linguistics: EMNLP",
+    venue: "EMNLP Findings",
     year: "2026",
     level: "CCF B",
     status: {
